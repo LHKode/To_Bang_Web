@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+   	<Files .htaccess>
+	order allow,deny
+	deny from all
+	</Files>
+
+	# bảo vệ file config
+    <Files config.php>
+    Order Allow,Deny
+    Deny from all
+    </Files>
+
+	#chuyển hướng file lỗi 
+    # chi tiet san pham
+#    RewriteRule ^san-pham/([a-zA-Z0-9_-]+)-([0-9]+).html$ chi-tiet-san-pham.php?id=$2
+#    RewriteRule index.html index.php
+
+    #khong ton tai trang
+
+</IfModule>
